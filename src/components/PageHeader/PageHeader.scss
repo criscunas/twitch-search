@@ -1,0 +1,18 @@
+@use '../../../../styles/assets/variables.scss' as *;
+@use '../../../../styles/assets/mixins.scss' as *;
+
+.header {
+  
+
+  &__nav {
+    padding: 1rem;
+
+    @include tablet {
+      padding: 2rem;
+    }
+  }
+
+  &__nav_text {
+    @include header-text;
+  }
+}

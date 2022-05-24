@@ -1,0 +1,19 @@
+@use '../../../../styles/assets/variables.scss' as *;
+@use '../../../../styles/assets/mixins.scss' as *;
+
+
+.hero {
+    padding: 5rem 1rem 2rem 1rem; 
+
+  @include tablet {
+    padding: 7rem 2rem 2rem 2rem; 
+  }
+
+  text-align: center;
+  
+  &__title {
+    @include display-text;
+    
+    
+  }
+}
