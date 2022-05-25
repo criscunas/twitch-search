@@ -41,7 +41,6 @@ export const SearchForm = ({handler}) => {
         error={
           formik.touched.streamer && Boolean(formik.errors.streamer)
         }
-        helperText={formik.touched.streamer && formik.errors.streamer}
         />
         <div className='search__button'>
           <Button 
