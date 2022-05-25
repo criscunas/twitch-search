@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 
 
 
-export const SearchForm = () => {
+export const SearchForm = ({handler}) => {
   
   const searchSchema = Yup.object({
     streamer: Yup.string().required("Streamer Required"),
@@ -17,7 +17,7 @@ export const SearchForm = () => {
       streamer: "",
     },
     onSubmit: (values, { resetForm }) => {
-      console.log(values)
+      handler(values.streamer)
       resetForm();
     },
   });
