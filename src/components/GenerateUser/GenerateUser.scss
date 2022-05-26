@@ -3,25 +3,31 @@
 
 
 .user {
-
   margin: 0 auto;
   max-width: 430px;
 
   &__container {
-    padding: 1rem;
-    background-color: whitesmoke;
+    padding: 1.5rem 1rem;
     margin: 0 1rem;
   }
 
   &__grid {
     display: flex;
     align-items: center;
+    text-align: center;
   }
 
   &__grid_name {
-    text-align: center;
     @include card-text;
-    color: black;
+    font-weight: 600;
+    color: white
+  }
+
+  &__grid_header {
+    @include card-text;
+    font-weight: 600;
+    color: #3c5ccf;
+    padding-bottom: 0.5rem;
   }
 
   &__grid_followers {
