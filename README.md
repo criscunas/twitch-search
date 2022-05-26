@@ -2,4 +2,4 @@
 
 Returns channel name & follower count using Twitch API  
 
-Client side for https://github.com/criscunas/streamforge-server
+Client side for https://github.com/criscunas/twitch-search-server
