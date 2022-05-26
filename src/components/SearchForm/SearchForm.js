@@ -8,7 +8,7 @@ import { useFormik } from "formik";
 export const SearchForm = ({handler}) => {
   
   const searchSchema = Yup.object({
-    streamer: Yup.string().required("Streamer Required"),
+    streamer: Yup.string().required(),
   });
   
   const formik = useFormik({
@@ -38,16 +38,12 @@ export const SearchForm = ({handler}) => {
         fullWidth
         focused = {false}
         value={formik.values.streamer}
-        error={
-          formik.touched.streamer && Boolean(formik.errors.streamer)
-        }
-        helperText={formik.touched.streamer && formik.errors.streamer}
         />
         <div className='search__button'>
           <Button 
             variant='contained' 
             type = "submit" 
-            size = "medium"
+            size = "large"
           >
           <p className = 'search__button_text'> Submit </p>
         </Button>

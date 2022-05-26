@@ -1,0 +1,34 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/mixins.scss' as *;
+
+
+.user {
+
+  margin: 0 auto;
+  max-width: 430px;
+
+  &__container {
+    padding: 1rem;
+    background-color: whitesmoke;
+    margin: 0 1rem;
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+  }
+
+  &__grid_name {
+    text-align: center;
+    @include card-text;
+    color: black;
+  }
+
+  &__grid_followers {
+    @extend .user__grid_name; 
+  }
+
+  &__error {
+    @extend .user__grid_name;
+  }
+}
