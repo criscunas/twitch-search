@@ -1,9 +1,10 @@
-@use '../../../../styles/assets/variables.scss' as *;
-@use '../../../../styles/assets/mixins.scss' as *;
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/mixins.scss' as *;
 
 .search {
-  
-  padding: 2rem 1rem;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem 1rem;
 
   &__header {
     @include body-text;
@@ -23,15 +24,18 @@
 
     Button {
       background-color: $orange;
-      padding: 0.5rem 1rem; 
+      padding: 0.5rem 1rem;
+      
+      @include tablet {
+        padding: 0.5rem 1.5rem;
+      }
     }
   }
     input {
       background-color: white;  
       border-radius: 3px;
       border-color: transparent;
-
-
+      
   }
 
   &__button_text {

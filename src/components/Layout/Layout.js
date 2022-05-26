@@ -4,9 +4,10 @@ import {PageHeader} from '../PageHeader/PageHeader';
 
 export const Layout = ({children}) => {
   return (
-    <>
-    <PageHeader/>
-      <main className="layout" > {children} </main>
-    </>
+    <main className="layout"> 
+      <PageHeader/>
+      {children} 
+    </main>
+    
   )
 }

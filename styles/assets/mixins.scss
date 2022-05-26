@@ -1,0 +1,71 @@
+@use '../assets/variables.scss' as *;
+
+@mixin card-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@mixin body-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  color: white;
+
+  @include tablet {
+    font-size: 1.3rem;
+  }
+}
+
+@mixin header-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: white;
+
+  @include tablet {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+
+@mixin display-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: white;
+
+  @include tablet {
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+  }
+}
+
+@mixin button-text {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-transform: none;
+  font-weight: 600;
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-size) {
+    @content;
+  }
+}
+
+@mixin breakpoint {
+  @media screen and (min-width: $midpoint-size) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-size) {
+    @content;
+  }
+}

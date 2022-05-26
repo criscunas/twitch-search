@@ -8,28 +8,38 @@ import axios from 'axios';
 
 export default function App() {
   
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState('');
+  const [loading, setLoading] = useState(false)
+
+
 
   const searchChannel = (channel) => {
+    
+    setLoading(true)
+    
     axios
       .get(`http://localhost:4444/channel/${channel}`)
       .then((res) => {
-        setUser(res.data.channel)
-        console.log(res.data);
+        setUser(res.data)
+        setLoading(false)
+        console.log(res)
       })
       .catch((err) => {
         console.log(err)
       })
   }
 
+  const renderLoading = () => {
+    return (
+      loading ? <Loading /> : null 
+    )
+  }
+
   return (
     <div className="app">
       <HeroSection/>
       <SearchForm handler = {searchChannel} />
-      {user ?
-        <GenerateUser user = {user} />
-        : <Loading/>
-        }
+      {!user ? renderLoading() : <GenerateUser channel = {user} />}
     </div>
   );
 }

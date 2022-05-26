@@ -1,5 +1,5 @@
-@use '../../../../styles/assets/variables.scss' as *;
-@use '../../../../styles/assets/mixins.scss' as *;
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/mixins.scss' as *;
 
 
 .user {
@@ -21,10 +21,14 @@
   &__grid_name {
     text-align: center;
     @include card-text;
+    color: black;
   }
 
   &__grid_followers {
+    @extend .user__grid_name; 
+  }
+
+  &__error {
     @extend .user__grid_name;
-    
   }
 }
