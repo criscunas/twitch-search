@@ -34,5 +34,6 @@
 
   &__error {
     @extend .user__grid_name;
+    text-align: center;
   }
 }
