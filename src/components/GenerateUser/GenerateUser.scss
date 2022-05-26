@@ -19,13 +19,11 @@
 
   &__grid_name {
     @include card-text;
-    font-weight: 600;
     color: white
   }
 
   &__grid_header {
     @include card-text;
-    font-weight: 600;
     color: #3c5ccf;
     padding-bottom: 0.5rem;
   }
